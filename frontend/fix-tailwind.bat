@@ -1,0 +1,16 @@
+@echo off
+echo Fixing Tailwind CSS issues...
+
+echo Running fix-package.js...
+node fix-package.js
+
+echo Removing node_modules...
+rmdir /s /q node_modules
+
+echo Removing .next directory...
+rmdir /s /q .next
+
+echo Installing dependencies...
+npm install
+
+echo Done! Now run 'npm run dev' to start the development server.
